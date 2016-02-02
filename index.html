@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style type="text/css" media="all">
+            div#contenedor_imagenes {
+                display: inline-block;
+                border: 1px solid white;
+                margin-top: 5em;
+            }
+            body {
+                background-color: black;
+                color: white;
+                text-align: center;
+            }
+        </style>
+         <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+         <script src="jQuery.galeria.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+            opciones = {};
+            /*opciones = {
+                hover1: function(imagen) {
+                            $(imagen).animate(
+                                {
+                                    width: "+=5em",
+                                    heigth: "+=5em",
+                                    opacity: 0.7
+                                },
+                                "fast"
+                            );
+                            $(imagen).css("border", "10px solid white");
+                            $(imagen).parent("div").find("img:not(.select)").animate(
+                                {
+                                    opacity: 0.4,
+                                    border: "5px solid white"
+                                },
+                                "fast"
+                            );
+                        },
+                hover2: function (imagen) { },
+                botonizq: '<input type="button" id="izq" value="<-">',
+                botonder: '<input type="button" id="der" value="->">',
+                izq: { "transform": "perspective(500px) rotateY(35deg) rotateZ(5deg)", "outline": "none" },
+                der: { "transform": "perspective(500px) rotateY(-35deg) rotateZ(-5deg)", "outline": "none" },
+                centro: { "height": "20em", "width": "20em", "outline": "5px solid white" }
+            };*/
+            $(document).ready(function () {
+                $("div#contenedor_imagenes").galeria([ "izquierda1.jpg", "izquierda3.png",
+                                                       "centro.jpg", "derecha1.jpg", "derecha3.jpg"],
+                                                       "15em", "20em", opciones);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="contenedor_imagenes">
+
+        </div>
+    </body>
+</html>
